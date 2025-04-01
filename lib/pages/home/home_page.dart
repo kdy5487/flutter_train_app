@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String startStation = ''; // 출발역
-  String endStation = ''; // 도착역
+  String endStation = ''; // 도착역d
 
   // 역 선택 후 반환되는 값을 처리하는 함수
   void _selectStation(bool isDeparture) async {
