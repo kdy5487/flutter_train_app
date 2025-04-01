@@ -7,7 +7,7 @@ import 'package:flutter_train_app/pages/seat/seat_page.dart'; // 좌석 선택 �
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
-}
+} //test
 
 class _HomePageState extends State<HomePage> {
   String startStation = ''; // 출발역
