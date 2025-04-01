@@ -1,26 +1,47 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# flutter_train_app
-=======
->>>>>>> 81c7273 (필수기능 구현중)
-# flutter_train_app
+1. 프로젝트 개요
+앱 이름: 기차 예매 앱
 
-A new Flutter project.
+목표: 사용자에게 출발역과 도착역을 선택하고, 좌석을 예매하는 기능을 제공하는 앱
 
-## Getting Started
+기능:
 
-This project is a starting point for a Flutter application.
+출발역과 도착역 선택
 
-A few resources to get you started if this is your first Flutter project:
+좌석 선택 기능
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+예매 확인 및 예약 기능
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-<<<<<<< HEAD
-=======
->>>>>>> 95f18a3 (필수기능 구현중)
->>>>>>> 81c7273 (필수기능 구현중)
+다크모드와 라이트모드 전환 기능
+
+2. 설치 및 실행
+필수 조건:
+
+Flutter SDK 설치
+
+Android Studio 혹은 VS Code 설치
+
+앱 실행 방법:
+
+Flutter SDK를 설치하고, 환경변수 설정을 완료합니다.
+
+git clone 혹은 download하여 프로젝트를 로컬에 다운로드합니다.
+
+flutter pub get 명령어를 통해 필요한 패키지를 설치합니다.
+
+Android/iOS 시뮬레이터 또는 실제 디바이스에서 앱을 실행하려면 flutter run 명령어를 사용합니다.
+
+3. 기능 설명
+출발역, 도착역 선택: 사용자는 출발역과 도착역을 선택할 수 있으며, 한 역을 선택한 후 반대 역을 선택할 때 그 역을 제외한 목록만 보여줍니다.
+
+좌석 선택: 사용자는 좌석을 클릭하여 예약 가능하며, 예약된 좌석은 더 이상 선택할 수 없습니다.
+
+다크모드 및 라이트모드: 앱은 다크모드와 라이트모드를 지원하며, 사용자가 설정을 통해 이를 변경할 수 있습니다.
+
+4. 기타
+버전 관리: Git을 사용하여 버전 관리를 하며, git commit을 통해 각 기능을 추가하거나 수정할 때마다 커밋을 남깁니다. git branch를 사용하여 기능별로 브랜치를 나누어 작업합니다.
+
+디버깅 및 로그: 앱에서 발생한 오류는 Flutter DevTools를 이용하여 디버깅할 수 있습니다. 오류 발생 시 flutter run 명령어로 로그를 확인하고 필요한 부분을 수정합니다.
+
+5. 기타 사항
+기타 추가된 기능: 만약 추가적으로 중요한 기능이나 구현이 필요하다면, 이를 추가하여 설명할 수 있습니다. 예를 들어, 좌석 예약의 유효성 검사, 네트워크 연결 상태 확인 등 추가적인 기능을 설명할 수 있습니다.
+
