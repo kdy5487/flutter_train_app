@@ -18,7 +18,12 @@ class _HomePageState extends State<HomePage> {
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => StationListPage(isDeparture: isDeparture),
+        builder:
+            (context) => StationListPage(
+              isDeparture: isDeparture,
+              excludeStation:
+                  isDeparture ? endStation : startStation, // 선택된 역을 제외한 목록을 전달
+            ),
       ),
     );
 
@@ -58,18 +63,20 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text('기차 예매')),
       body: Container(
-        padding: EdgeInsets.all(20), // padding 20
-        color: Colors.grey[200], // 배경색
+        padding: EdgeInsets.all(20),
+        color: Colors.grey[200],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, // 세로 가운데 정렬
           children: [
+            // 출발역과 도착역 선택 박스
             StationSelectionBox(
               startStation: startStation,
               endStation: endStation,
               onTapStart: () => _selectStation(true),
               onTapEnd: () => _selectStation(false),
             ),
-            SizedBox(height: 20), // 출발역과 도착역 박스와 버튼 간의 간격
+            SizedBox(height: 20),
+            // 좌석 선택 버튼
             SeatSelectionButton(onPressed: _navigateToSeatPage),
           ],
         ),
