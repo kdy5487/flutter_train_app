@@ -7,7 +7,7 @@ import 'package:flutter_train_app/pages/station_list/station_list_page.dart'; //
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
-} //test
+}
 
 class _HomePageState extends State<HomePage> {
   String startStation = ''; // 출발역
@@ -58,10 +58,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text('기차 예매')),
       body: Container(
-        padding: EdgeInsets.all(20),
-        color: Colors.grey[200],
+        padding: EdgeInsets.all(20), // padding 20
+        color: Colors.grey[200], // 배경색
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, // 세로 가운데 정렬
           children: [
             StationSelectionBox(
               startStation: startStation,
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
               onTapStart: () => _selectStation(true),
               onTapEnd: () => _selectStation(false),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20), // 출발역과 도착역 박스와 버튼 간의 간격
             SeatSelectionButton(onPressed: _navigateToSeatPage),
           ],
         ),

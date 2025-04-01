@@ -16,26 +16,27 @@ class StationSelectionBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //출발역과 도착역 감싸는 박스
-      height: 200, //높이200
+      height: 200, // 높이 200
       decoration: BoxDecoration(
-        //데코레이션으로 꾸미기(배경이미지, 색상, 테두리 둥글기 등등)
-        color: Colors.white, //박스안에 하얀색
-        borderRadius: BorderRadius.circular(20), //모서리 둥글기 20
+        color: Colors.white, // 배경색 흰색
+        borderRadius: BorderRadius.circular(20), // 모서리 둥글기 20
       ),
       child: Row(
-        //박스 안 Row로 정의
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center, // 세로 가운데 정렬
         children: [
-          GestureDetector(
-            onTap: onTapStart,
-            child: _StationLabel(text: '출발역', stationName: startStation),
+          Expanded(
+            child: GestureDetector(
+              onTap: onTapStart,
+              child: _StationLabel(text: '출발역', stationName: startStation),
+            ),
           ),
-
+          // 세로선 추가
           _VerticalDividerLine(),
-          GestureDetector(
-            onTap: onTapEnd,
-            child: _StationLabel(text: '도착역', stationName: endStation),
+          Expanded(
+            child: GestureDetector(
+              onTap: onTapEnd,
+              child: _StationLabel(text: '도착역', stationName: endStation),
+            ),
           ),
         ],
       ),
@@ -67,6 +68,8 @@ class _StationLabel extends StatelessWidget {
           Text(
             stationName.isEmpty ? '선택' : stationName,
             style: TextStyle(fontSize: 40),
+            overflow: TextOverflow.ellipsis, // 텍스트가 길어지면 잘리도록 함
+            softWrap: false, // 자동 줄 바꿈을 방지
           ),
         ],
       ),
@@ -74,9 +77,14 @@ class _StationLabel extends StatelessWidget {
   }
 }
 
+// 세로선
 class _VerticalDividerLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(width: 2, height: 50, color: Colors.grey[400]);
+    return Container(
+      width: 2, // 세로선 너비
+      height: 50, // 세로선 높이
+      color: Colors.grey[400], // 세로선 색상
+    );
   }
 }
