@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//선택됨, 선택안됨 박스
 class SeatStatusBox extends StatelessWidget {
   final Color color;
   final String label;
@@ -18,7 +19,7 @@ class SeatStatusBox extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
         ),
-        SizedBox(width: 4),
+        SizedBox(width: 4), // 상태 박스와 텍스트 간의 간격
         Text(label),
       ],
     );

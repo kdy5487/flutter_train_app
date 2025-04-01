@@ -58,39 +58,45 @@ class _SeatPageState extends State<SeatPage> {
     return Scaffold(
       appBar: AppBar(title: Text('좌석 선택')), //앱바
       body: Column(
-        //세로
         children: [
           // 출발역 -> 도착역 표시
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // 중심으로 정렬
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // 균등 정렬
             children: [
-              Text(
-                widget.startStation, //출발역
-                style: TextStyle(
-                  //텍스트 스타일 정리
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple,
-                  fontSize: 30,
+              Expanded(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    widget.startStation, //출발역
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.purple,
+                      fontSize: 30,
+                    ),
+                  ),
                 ),
               ),
               Icon(
-                //화살표
-                Icons.arrow_circle_right_outlined,
+                Icons.arrow_circle_right_outlined, //화살표 아이콘
                 size: 30,
                 color: Colors.black,
               ),
-              Text(
-                widget.endStation, //도착역
-                style: TextStyle(
-                  //텍스트 스타일 정리
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple,
-                  fontSize: 30,
+              Expanded(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    widget.endStation, //도착역
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.purple,
+                      fontSize: 30,
+                    ),
+                  ),
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10), //간격 주기
+          SizedBox(height: 10), // 간격 주기
           // 좌석 상태 박스 (선택됨, 선택 안됨)
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +106,7 @@ class _SeatPageState extends State<SeatPage> {
               SeatStatusBox(color: Colors.grey[300]!, label: '선택 안됨'),
             ],
           ),
-          SizedBox(height: 15), // 좌석 상태 박스 아래 간격
+          SizedBox(height: 10), // 좌석 상태 박스 아래 간격
           // 좌석 레이블 (A, B, C, D)
           SeatLabel(),
 
@@ -146,5 +152,5 @@ class _SeatPageState extends State<SeatPage> {
         ],
       ),
     );
-  } //ss
+  }
 }
