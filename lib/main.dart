@@ -11,7 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(), //첫 실행로 홈 페이지
+      themeMode: ThemeMode.dark, // 다크 테마로 시작
+      darkTheme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: Colors.black, // 배경색을 다크 테마에 맞게 설정
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.black, // 앱바 색상 다크 테마에 맞게 설정
+        ),
+      ),
+      home: HomePage(), // 첫 실행으로 홈 페이지
     );
   }
 }
