@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_train_app/pages/home/widgets/seat_selection_button.dart';
 import 'package:flutter_train_app/pages/home/widgets/station_selector_box.dart';
+import 'package:flutter_train_app/pages/seat/seat_page.dart';
 import 'package:flutter_train_app/pages/station_list/station_list_page.dart'; // 역 목록 페이지 추가
-import 'package:flutter_train_app/pages/seat/seat_page.dart'; // 좌석 선택 페이지 추가
 
 class HomePage extends StatefulWidget {
   @override

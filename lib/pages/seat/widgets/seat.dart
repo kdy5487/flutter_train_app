@@ -11,18 +11,11 @@ class Seat extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 50,
-        height: 50,
-        margin: EdgeInsets.symmetric(horizontal: 4),
+        width: 50, // 가로 크기 50으로 설정
+        height: 50, // 세로 크기 50으로 설정
         decoration: BoxDecoration(
-          color: isSelected ? Colors.purple : Colors.grey[300]!,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Icon(
-          //아이콘이미지 생략가능
-          Icons.event_seat,
-          size: 30,
-          color: isSelected ? Colors.white : Colors.black,
+          color: isSelected ? Colors.purple : Colors.grey[300]!, // 색상 설정
+          borderRadius: BorderRadius.circular(8), // 모서리 둥글기
         ),
       ),
     );
